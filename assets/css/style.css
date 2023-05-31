@@ -114,7 +114,7 @@ body
 
 .footerheader
 {
-	padding-top: 105px;
+	padding-top: 175px;
 	font-style: normal;
 	font-weight: 500;
 	font-size: 36px;
@@ -123,6 +123,11 @@ body
 	text-align: center;
 	color: #454444;
 }
+@media only screen and (max-width: 600px) {
+	.footerheader{
+		padding-top: 105px;
+	}
+ }
 
 .footercontent
 {
