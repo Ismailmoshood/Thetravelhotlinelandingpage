@@ -1,7 +1,7 @@
 body
 {
   margin: 0;
-  width: 100%;
+  /* width: 100%; */
   font-family: 'Montserrat', sans-serif; 
   color: #FFFFFF;
 }
@@ -155,13 +155,14 @@ body
 }
 .lower-banner{
 	background: url(../images/footer_image.jpg);
+	height: 523px
 }
 .show{
 	display: none;
 }
 #icons{
 	position: relative;
-	top: 50px;
+	top: 30px;
 	left: 210px;
 	opacity: 0.7;
 }
@@ -197,5 +198,7 @@ body
 	}
 	.lower-banner{
 		background: url(../images/pexels-leah-kelley-3935702\ 5.png);
+		height: 583px;
+		padding: 10px;
 	}
  }
