@@ -5,7 +5,6 @@ body
   font-family: 'Montserrat', sans-serif; 
   color: #FFFFFF;
 }
-
 .header1
 {
 	font-style: normal;
@@ -80,8 +79,8 @@ body
 	margin-top: 15px; 
 	margin-bottom: 25px;
 	font-style: normal;
-	font-weight:
-	500; font-size: 16px;
+	font-weight:500; 
+	font-size: 20px;
 	line-height: 20px;
 	text-align: center;
 	color: #454444;
@@ -97,10 +96,19 @@ body
 	font-size: 20px;
 	line-height: 24px;
 	letter-spacing: 0.02em;
-	text-align: center;
 	color: #454444;
 }
-
+.section2-flex{
+	display: flex; 
+	justify-content: center;
+	margin: auto; 
+	width: 80%
+}
+.flex-content{
+	text-align: center;
+	padding-top: 25px;
+	margin: 40px 60px; 
+}
 .section3header
 {
 	padding-top: 120px;
@@ -108,7 +116,6 @@ body
 	font-weight: 500;
 	font-size: 36px;
 	line-height: 44px;
-	text-align: center;
 	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
@@ -153,6 +160,9 @@ body
 	margin-top: 25px;
 	margin-right: 40px;
 }
+#input1{
+	width: 282px;
+}
 .lower-banner{
 	background: url(../images/footer_image.jpg);
 	height: 523px
@@ -161,45 +171,100 @@ body
 	display: none;
 }
 #icons{
-	position: relative;
+	/* position: relative;
 	top: 30px;
-	left: 60px;
+	left: 60px; */
 	opacity: 0.7;
+	width: 400px;
+	margin-top: 100px;
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
 	.hidden{
 		display: none;
 	}
 	.footerheader{
-		padding-top: 115px;
+		padding-top: 80px;
 	}
 	.underline{
 		text-decoration: underline black 1px;
-		font-size: 30px;
 	}
 	.show{
 		display: inline-block;
 	}
 	.footer-form{
-		display: grid;
-		justify-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	#mobile-image{
+		width: 250px;
+		margin: 20px 75px;
+	}
+	.flex-this{
+		display: flex;
+		justify-content: space-between;
 	}
 	.subsfrm{
 		border: none;
-		height: 50px;
-		width: 300px;
+		height: 43px;
 		text-align: center;
-		font-style: small;
+		font-size: 15px;
 	   font-weight: 400;
 	}
+	.section2-flex{
+		flex-direction: column;
+	}
+	#input1{
+		margin-left: 30px;
+		width: 170px;
+		margin-top: 30px;
+	}
+	#input2{
+		width: 200px;
+		margin: 15px 0;
+	}
+	.section3header{
+		padding-top: 40px;
+		font-size: 18px;
+	}
 	.headerbutton{
-		height: 48px;
+		height: 40px;
+		width: 120px;
 		font-weight: 500;
 		font-size: 20px;
 	}
 	.lower-banner{
 		background: url(../images/pexels-leah-kelley-3935702\ 5.png);
-		height: 583px;
+		height: 500px;
 		padding: 10px;
 	}
+	.section2 ,
+	.footerheader
+{
+	font-size: 20px;
+}
+.section3content,
+.headerbutton,
+.section2content{
+	text-align: center;
+	font-size: 15px;
+}
+.footercontent,
+.tagline
+{
+	font-size: 20px;
+}
+.section2header{
+	font-size: 19;
+}
+.header1{
+	font-size: 44px;
+}
+#signup{
+	border-radius: 10px;
+}
+.flex-content{
+	margin: 10px; 
+}
  }
