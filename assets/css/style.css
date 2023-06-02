@@ -1,13 +1,18 @@
 body
 {
   margin: 0;
-  /* width: 100%; */
+  width: 100%;
   font-family: 'Montserrat', sans-serif; 
   color: #FFFFFF;
 }
 
 .top-banner{
 	height: 800px
+}
+#logo-text{
+	text-decoration: none; 
+	color: #fff; 
+	font-size: 20px;
 }
 .header1
 {
@@ -18,9 +23,20 @@ body
 
 	color: #FFFFFF;
 
-	margin-top: 150px;
+	margin-top: 180px;
 	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
 	text-align: center;
+}
+.flex-this{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px 15px 0 40px;
+}
+.flex-this img{
+	height: 80px; 
+	width: 80px; 
+	margin-top: -8px;
 }
 
 .tagline
@@ -41,7 +57,7 @@ body
 {
 	position: relative;
 	width: 190px;
-	height: 58px;
+	height: 50px;
 
 	margin-top: 30px;
 	background: #532C7D;
@@ -49,7 +65,7 @@ body
 
 	font-style: normal;
 	font-weight: 600;
-	font-size: 24px;
+	font-size: 21px;
 	line-height: 29px;
 	border: #F7F7F7;
 	color: #FFFFFF;
@@ -59,10 +75,11 @@ body
 {
 	font-style: normal;
 	font-weight: 500;
-	font-size: 36px;
+	font-size: 37px;
 	line-height: 44px;
 	text-align: center;
-
+	margin-top: 55px;
+	margin-bottom: 35px;
 	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
@@ -84,7 +101,7 @@ body
 	margin-bottom: 25px;
 	font-style: normal;
 	font-weight:500; 
-	font-size: 20px;
+	font-size: 15px;
 	line-height: 20px;
 	text-align: center;
 	color: #454444;
@@ -97,7 +114,8 @@ body
 	padding-bottom: 50px;
 	font-style: normal;
 	font-weight: 500;
-	font-size: 20px;
+	text-align: start;
+	font-size: 18px;
 	line-height: 24px;
 	letter-spacing: 0.02em;
 	color: #454444;
@@ -106,7 +124,7 @@ body
 	display: flex; 
 	justify-content: center;
 	margin: auto; 
-	width: 80%
+	width: 90%
 }
 .flex-content{
 	text-align: center;
@@ -115,10 +133,11 @@ body
 }
 .section3header
 {
-	padding-top: 120px;
+	padding-top: 90px;
 	font-style: normal;
 	font-weight: 500;
 	font-size: 36px;
+	text-align: start;
 	line-height: 44px;
 	text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
@@ -149,7 +168,7 @@ body
 .subsfrm
 {
 	width: 370px;
-	height: 63px;
+	height: 57px;
 	top: 2463px;
 	background: #F7F7F7;
 	border-radius: 10px;
@@ -167,6 +186,10 @@ body
 #input1{
 	width: 282px;
 }
+#signup{
+	border-radius: 10px; 
+	height:57px;
+}
 .lower-banner{
 	background: url(../images/footer_image.jpg);
 	height: 523px
@@ -175,22 +198,33 @@ body
 	display: none;
 }
 #icons{
-	/* position: relative;
-	top: 30px;
-	left: 60px; */
-	opacity: 0.7;
-	width: 400px;
-	margin-top: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 60px;
+}
+#icons img{
+	margin-right: 34px
 }
 @media only screen and (max-width: 800px) {
+	#logo-text{
+		font-size: 12px;
+	}
 	.hidden{
 		display: none;
+	}
+	.flex-this img{
+		height: 43px; 
+		width: 43px; 
 	}
 	.footerheader{
 		padding-top: 80px;
 	}
 	.underline{
 		text-decoration: underline black 1px;
+	}
+	.section2{
+		margin-bottom: 0;
 	}
 	.show{
 		display: inline-block;
@@ -206,8 +240,7 @@ body
 		margin: 20px 75px;
 	}
 	.flex-this{
-		display: flex;
-		justify-content: space-between;
+		padding: 20px 8px 0 20px;
 	}
 	.subsfrm{
 		border: none;
@@ -230,7 +263,8 @@ body
 	}
 	.section3header{
 		padding-top: 40px;
-		font-size: 18px;
+		font-size: 19px;
+		text-align: center;
 	}
 	.headerbutton{
 		height: 40px;
@@ -240,15 +274,19 @@ body
 	}
 	.lower-banner{
 		background: url(../images/pexels-leah-kelley-3935702\ 5.png);
-		height: 500px;
+		height: 520px;
 		padding: 10px;
+		margin-top: -70px;
 	}
 	.section2 ,
 	.footerheader
 {
 	font-size: 20px;
 }
-.section3content,
+.section3content{
+	font-size: 12px;
+	text-align: center;
+}
 .headerbutton,
 .section2content{
 	text-align: center;
@@ -264,14 +302,25 @@ body
 }
 .header1{
 	font-size: 44px;
+	margin-top: 80px;
 }
 #signup{
-	border-radius: 10px;
+	height: 33px;
 }
 .flex-content{
-	margin: 15px 10px ; 
+	margin: 0px 40px ; 
+}
+.flex-content img{
+	width: 82px;
+	height: 82px;
 }
 .top-banner{
-	height: 600px
+	height: 400px
+}
+#icons{
+	margin-top: 35px;
+}
+#icons img{
+	margin-right: 19px
 }
  }
