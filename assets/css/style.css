@@ -198,25 +198,24 @@ body
 	background: url(../images/footer_image.jpg);
 	height: 523px
 }
-.show{
-	display: none;
-}
-#icons{
+
+.icons{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin-top: 60px;
 }
-#icons img{
+.icons img{
 	margin-right: 34px
+}
+.show{
+	display: none;
 }
 @media only screen and (max-width: 800px) {
 	#logo-text{
 		font-size: 12px;
 	}
-	.hidden{
-		display: none;
-	}
+	
 	.flex-this img{
 		height: 43px; 
 		width: 43px; 
@@ -321,15 +320,21 @@ body
 .top-banner{
 	height: 400px
 }
-#icons{
+.icons{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin-top: 35px;
 }
-#icons img{
+.icons img{
 	margin-right: 19px
 }
 .modal{
-	width: 400px;
+	width: 380px;
 	margin: auto;
 	height: 550px;
 }
+.hidden{
+		display: none;
+	}
  }
