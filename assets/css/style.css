@@ -5,7 +5,11 @@ body
   font-family: 'Montserrat', sans-serif; 
   color: #FFFFFF;
 }
-
+.modal{
+	width: 1000px;
+	margin: auto;
+	height: 607px;
+}
 .top-banner{
 	height: 800px
 }
@@ -322,5 +326,10 @@ body
 }
 #icons img{
 	margin-right: 19px
+}
+.modal{
+	width: 400px;
+	margin: auto;
+	height: 550px;
 }
  }
