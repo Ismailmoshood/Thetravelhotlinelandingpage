@@ -103,9 +103,10 @@
         <div class = "footercontent">Join to get the latest updates for free!
         </div>
         <div style="text-align: center; margin-top: 20px;" class="footer-form">
+          <form id="myForm" action="https://script.google.com/macros/s/AKfycbxtS7yMfXoIRKxaa0O-3o4BZCyBDB2W7fBXl4fJGSgZxEiIGyQvLLF4lmAfeDeYpIim/exec" method="post">
           <input type="text" name="name" class="subsfrm" id="input1" placeholder="Your Name">
           <input type="text" name="email" class="subsfrm" id="input2" placeholder="Your Email Address">
-          <button class="headerbutton" type="submit" id="signup">Sign Up</button>
+          <button class="headerbutton" type="button" id="signup">Sign Up</button>
         </div>
         <div class="blog-link">
           <a href="https://travelhotlineblog.wordpress.com" target="_blank" rel="noopener noreferrer">Visit our Blog here</a>
@@ -132,10 +133,10 @@
             <div class="survey-modal-body-center modal-body survey-elements-center">
               <p class="survey-header">Thank you for joining our newsletter!</p>
               <p class="survey-subheader" style="max-width: 35rem">Please complete this one minute survey to help us make the next best travel app on the market!</p>
-              <form>
+              <!-- <form id="myForm" action="https://script.google.com/macros/s/AKfycbxalmmiQydmhmFBAaTUfGtazmi5doIBCfNqZTqrZou8wrkCPSw1jNfhpkgwg8eJVfPM/exec" method="post"> -->
                 <div class="form-group survey-elements-center">
-                  <label for="travel-frequency" class="survey-elements-label">1. How often do you travel per year?</label>
-                  <select class="form-control border-rad15 custom-select" style="max-width: 16rem;border:0px" id="travel-frequency" name="Travel Frequency">
+                  <label for="travelfrequency" class="survey-elements-label">1. How often do you travel per year?</label>
+                  <select class="form-control border-rad15 custom-select" style="max-width: 16rem;border:0px" id="travelfrequency" name="travelfrequency">
                     <option value="1-5">1-5</option>
                     <option value="5-10">5-10</option>
                     <option value="10-15">10-15</option>
@@ -146,7 +147,6 @@
                   <label for="message" class="survey-elements-label" style="max-width: 30rem">2. If you could have a travel app made exactly to your liking, what features would the travel app consist of? Feel free to go into as much or as little detail as you’d like.</label>
                   <textarea class="form-control border-rad15 textarea-h100" style="max-width: 26rem;border:0px" id="message" name="message" required></textarea>
                 </div>
-                <!-- div monkey can go in this div -->
                 <div class="survey-elements-center">
                   <button class="btn btn-primary px-4 border-rad18 survey-submit"style="margin-top: 50px" type="submit">Submit</button>
                 </div>
@@ -167,14 +167,28 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     
     <script>
-      
       $(document).ready(function() {
         $("#signup").click(function() {
           $("#surveyform").modal("show");
         });
       });
+      
+      document.getElementById("myForm").addEventListener("submit", function(e) {
+  e.preventDefault(); // Prevent the form from submitting normally
 
+  var formData = new FormData(this);
+  // Send a POST request to the Google Apps Script URL
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", this.action, true);
+  xhr.send(formData);
+
+  // Redirect to the home page after successful form submission
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      window.location.href = "http://127.0.0.1:5500/index.html"; // Replace with your home page URL
+    }
+  };
+});
     </script>
-
   </body>
 </html>
